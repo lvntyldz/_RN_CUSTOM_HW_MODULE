@@ -12,8 +12,17 @@ import {
   View
 } from 'react-native';
 
+var MyCustomModule = require('NativeModules').CustomModule;
+
 export default class customModule extends Component {
   render() {
+
+
+MyCustomModule.sum(5,3,res => {
+    alert(res);
+});
+
+
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
