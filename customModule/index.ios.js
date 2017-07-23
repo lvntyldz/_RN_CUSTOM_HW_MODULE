@@ -12,8 +12,13 @@ import {
   View
 } from 'react-native';
 
+var CustomIOSPlugin = require('NativeModules').CustomIOSPlugin;
+
 export default class customModule extends Component {
   render() {
+
+    alert(CustomIOSPlugin.sayHello);
+
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
